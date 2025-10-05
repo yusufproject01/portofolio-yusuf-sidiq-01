@@ -8,10 +8,8 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        // Contoh warna kustom — ganti sesuai pilihan Anda
         primary: "#062037",
-        accent: "#f97316",
-        "brand-100": "#f5f3ff",
+        secondary: "#0a192f",
       },
     },
   },

@@ -10,6 +10,46 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+
+  /* 🎨 Warna custom */
+  --color-primary: #062037;
+  --color-secondary: #1e90d5;
+
+  /* 🌈 Gradasi Instagram */
+  --color-ig-orange: #f58529;
+  --color-ig-pink: #dd2a7b;
+  --color-ig-purple: #515bd4;
+  /* 🌈 Gradasi Facebook */
+  --color-fb-blue: #1877f2;
+  /* 🌈 Gradasi LinkedIn */
+  --color-linked-dark: #0a66c2;
+  --color-linked-blue: #0077b5;
+  --color-linked-light: #00cfff;
+  /* Gradasi Neon */
+  --color-neon-cyan: #00f5ff;
+  --color-neon-epurple: #7a00ff;
+  --color-neon-magenta: #ff00e0;
+  /* Gradasi Neon */
+  --color-aqua-hotpink: #ff00cc;
+  --color-aqua-cyan: #00ffff;
+  --color-aqua-lime: #ccff00;
+}
+
+@keyframes gradient-move {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animate-gradient {
+  background-size: 200% 200%;
+  animation: gradient-move 6s ease infinite;
 }
 
 @media (prefers-color-scheme: dark) {
