@@ -14,7 +14,7 @@ export default function MainLayout({
 }: Readonly<MainLayoutProps>) {
   return (
     <div
-      className={`min-h-screen flex flex-col bg-white text-gray-900 ${className}`}
+      className={`min-h-auto flex flex-col bg-white text-gray-900 ${className}`}
     >
       {children}
     </div>

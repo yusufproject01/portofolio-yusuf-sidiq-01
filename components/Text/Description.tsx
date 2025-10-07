@@ -13,7 +13,7 @@ const inter = Inter({
 export default function Description() {
   const [hoverIndex, setHoverIndex] = useState<number | null>(null);
   const text =
-    "Saya membuat aplikasi web yang fokus pada pengalaman pengguna dan performa. Saya menggabungkan praktik terbaik dalam frontend dan backend untuk membangun antarmuka yang estetis namun tetap fungsional. Keahlian saya termasuk React/Next.js, desain responsif, dan optimisasi performa agar aplikasi berjalan cepat di berbagai perangkat.";
+    "I build web applications with a focus on user experience and performance. I combine best practices in frontend and backend development to create aesthetically pleasing yet functional interfaces. My expertise includes React/Next.js, responsive design, and performance optimization to ensure apps run fast across a wide range of devices.";
 
   const words = text.split(" ");
 

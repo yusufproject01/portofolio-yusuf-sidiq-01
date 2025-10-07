@@ -1,30 +1,14 @@
 import Image from "next/image";
-import { Poppins, Inter, Roboto_Condensed } from "next/font/google";
 import Link from "next/link";
-import Description from "./Text/Description";
-
-const poppins = Poppins({
-  subsets: ["latin"],
-  weight: ["700", "800"],
-  display: "swap",
-});
-const inter = Inter({
-  subsets: ["latin"],
-  weight: ["400", "500"],
-  display: "swap",
-});
-const robotoCondensed = Roboto_Condensed({
-  subsets: ["latin"],
-  weight: ["700"],
-  display: "swap",
-});
+import Description from "../Text/Description";
+import { poppins, inter, robotoCondensed } from "../FontGoogle";
 
 export default function HeroSection() {
   return (
     <section
       aria-label="Hero"
-      className="w-full h-screen flex items-center bg-cover bg-center"
-      style={{ backgroundImage: "url('/Img/HeroSec/HeroSec2.jpg')" }}
+      className="w-full h-auto flex items-center bg-cover bg-center pt-24 pb-12"
+      style={{ backgroundImage: "url('/Img/HeroSec/Bg-HeroSection.png')" }}
     >
       {/* Left column: texts + CTA + socials */}
       <div className="w-1/2 h-full flex flex-col justify-center items-start px-12">
@@ -32,7 +16,7 @@ export default function HeroSection() {
           {/* small bold name */}
           <div className="w-full flex justify-start">
             <h1
-              className={`${robotoCondensed.className} text-2xl shadow shadow-secondary cursor-pointer font-bold border border-secondary p-2 text-white/80 hover:text-secondary animate-gradient`}
+              className={`${robotoCondensed.className} text-2xl hover:shadow shadow-secondary cursor-pointer font-bold hover:border border-secondary rounded-sm p-2 text-secondary hover:text-white/80 animate-gradient`}
             >
               Yusuf Sidiq
             </h1>
@@ -53,11 +37,11 @@ export default function HeroSection() {
               Fullstack
             </span>{" "}
             <span className="text-5xl sm:text-7xl bg-gradient-to-r from-neon-cyan via-neon-magenta to-neon-epurple bg-clip-text text-transparent animate-gradient cursor-pointer">
-              WebDev |
+              WebDev
             </span>{" "}
-            <span className="text-4xl sm:text-5xl">and</span>{" "}
+            <span className="text-4xl sm:text-5xl"> and</span>{" "}
             <span className="text-5xl sm:text-7xl bg-gradient-to-r from-aqua-lime via-aqua-hotpink to-aqua-cyan bg-clip-text text-transparent animate-gradient cursor-pointer">
-              Design
+              Graphic Design
             </span>{" "}
           </h1>
 
@@ -76,8 +60,8 @@ export default function HeroSection() {
             <div className="flex items-center gap-3 ml-2">
               {/* Instagram */}
               <Link
-                href="https://instagram.com"
-                aria-label="Instagram"
+                href="https://www.instagram.com/bambinaa_26/"
+                aria-label="bambinaa_26"
                 className="hover:bg-gradient-to-br from-ig-orange via-ig-pink to-ig-purple w-12 h-12 rounded-full bg-white/10 flex items-center justify-center transition"
               >
                 <svg
@@ -133,19 +117,19 @@ export default function HeroSection() {
           {/* Glow / light effect behind the image */}
           <span
             aria-hidden
-            className="absolute z-0 w-64 h-64 rounded-full bg-gradient-to-r from-indigo-400 via-pink-400 to-yellow-300 opacity-50 filter blur-3xl transform scale-110 animate-gradient"
+            className="absolute z-0 w-64 h-64 rounded-full bg-gradient-to-r from-indigo-400 via-pink-400 to-yellow-300 opacity-50 filter blur-3xl translate-y-6 transform scale-110 animate-gradient"
             style={{ mixBlendMode: "screen" }}
           />
 
           {/* Subtle second halo for depth */}
           <span
             aria-hidden
-            className="absolute z-0 w-80 h-80 rounded-full bg-gradient-to-r from-indigo-500 to-ig-pink opacity-50 filter blur-2xl -translate-y-4 animate-gradient"
+            className="absolute z-0 w-80 h-80 rounded-full bg-gradient-to-r from-indigo-500 to-ig-pink opacity-50 filter blur-2xl translate-y-6 animate-gradient"
             style={{ mixBlendMode: "screen" }}
           />
-          <div className="relative z-10 max-w-md w-full -top-8 shadow-primary-glow">
+          <div className="relative z-10 max-w-sm w-full -top-10 -right-4 shadow-primary-glow">
             <Image
-              src="/Png/HeroSec/Yusuf.png"
+              src="/Png/HeroSec/Yusuf1.png"
               width={500}
               height={500}
               alt="Yusuf"
