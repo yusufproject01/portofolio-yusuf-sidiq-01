@@ -7,7 +7,7 @@ import {
   inter,
   robotoCondensed,
   geistSans,
-} from "@/components/FontGoogle";
+} from "@/app/components/FontGoogle";
 import Image from "next/image";
 import Link from "next/link";
 
