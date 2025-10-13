@@ -19,7 +19,7 @@ export default function Description() {
 
   return (
     <p
-      className={`${inter.className} mt-6 text-base sm:text-lg text-justify leading-relaxed`}
+      className={`${inter.className} mt-4 text-base sm:text-lg text-justify leading-relaxed`}
     >
       {words.map((word, index) => (
         <React.Fragment key={index}>

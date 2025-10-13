@@ -1,47 +1,74 @@
 import Image from "next/image";
 import Link from "next/link";
 import Description from "../Text/Description";
-import { poppins, inter, robotoCondensed } from "../FontGoogle";
+import { poppins } from "../FontGoogle";
+import SplitText from "../SplitText/SplitText";
+import Squares from "../Squares/Squares";
+import RotatingText from "../RotatingText/RotatingText";
 
 export default function HeroSection() {
   return (
     <section
+      id="home"
       aria-label="Hero"
-      className="w-full h-auto flex items-center bg-cover bg-center pt-24 pb-12"
-      style={{ backgroundImage: "url('/Img/HeroSec/Bg-HeroSection.png')" }}
+      className="w-full h-full flex items-center bg-cover bg-center pt-14 bg-primary"
+      // style={{ backgroundImage: "url('/Img/HeroSec/Bg-HeroSection.png')" }}
     >
+      {/* Tryng BG */}
+      <div className="absolute top-0 left-0 w-full h-full ">
+        <Squares
+          speed={0.2}
+          squareSize={40}
+          direction="diagonal" // up, down, left, right, diagonal
+          borderColor="#1e90d5"
+          hoverFillColor="#00f5ff"
+        />
+      </div>
+
       {/* Left column: texts + CTA + socials */}
-      <div className="w-1/2 h-full flex flex-col justify-center items-start px-12">
+      <div className="w-1/2 h-full flex flex-col justify-center items-start px-12 z-20">
         <div className="max-w-xl">
-          {/* small bold name */}
-          <div className="w-full flex justify-start">
-            <h1
-              className={`${robotoCondensed.className} text-2xl hover:shadow shadow-secondary cursor-pointer font-bold hover:border border-secondary rounded-sm p-2 text-secondary hover:text-white/80 animate-gradient`}
-            >
-              Yusuf Sidiq
-            </h1>
-          </div>
-
           {/* greeting */}
-          <h2 className={`${inter.className} mt-3 text-2xl text-white/95`}>
-            Hay! I'm Yusuf
-          </h2>
-
+          <SplitText
+            text="Hello, I'm Yusuf"
+            className="text-2xl text-white/90 font-semibold text-center"
+            delay={80}
+            duration={0.6}
+            ease="power3.out"
+            splitType="chars"
+            from={{ opacity: 0, y: 40 }}
+            to={{ opacity: 1, y: 0 }}
+            threshold={0.1}
+            rootMargin="-100px"
+            textAlign="center"
+          />
           {/* big role */}
           <h1
             className={`${poppins.className} mt-2 font-extrabold text-white leading-tight`}
           >
-            <span className="text-4xl sm:text-5xl">I'm a</span>
+            <span className="text-3xl sm:text-4xl">I'm a</span>
             {"  "}
-            <span className="text-5xl sm:text-7xl bg-gradient-to-r from-ig-purple via-ig-pink to-ig-orange bg-clip-text text-transparent animate-gradient cursor-pointer">
+            {/* <span className="text-4xl sm:text-6xl bg-gradient-to-r from-ig-purple via-ig-pink to-ig-orange bg-clip-text text-transparent animate-gradient cursor-pointer">
               Fullstack
-            </span>{" "}
-            <span className="text-5xl sm:text-7xl bg-gradient-to-r from-neon-cyan via-neon-magenta to-neon-epurple bg-clip-text text-transparent animate-gradient cursor-pointer">
+            </span>{" "} */}
+            <RotatingText
+              texts={["FrontEnd", "BackEnd", "FullStack"]}
+              mainClassName="px-2 sm:px-2 md:px-3 text-5xl bg-cyan-300 text-black overflow-hidden py-0.5 sm:py-1 md:py-1 justify-center rounded-lg"
+              staggerFrom={"last"}
+              initial={{ y: "100%" }}
+              animate={{ y: 0 }}
+              exit={{ y: "-120%" }}
+              staggerDuration={0.08}
+              splitLevelClassName="overflow-hidden pb-0.5 sm:pb-1 md:pb-1"
+              transition={{ type: "spring", damping: 30, stiffness: 400 }}
+              rotationInterval={4000}
+            />
+            <span className="text-4xl sm:text-5xl bg-gradient-to-r from-neon-cyan via-neon-magenta to-neon-epurple bg-clip-text text-transparent animate-gradient cursor-pointer">
               WebDev
             </span>{" "}
-            <span className="text-4xl sm:text-5xl"> and</span>{" "}
-            <span className="text-5xl sm:text-7xl bg-gradient-to-r from-aqua-lime via-aqua-hotpink to-aqua-cyan bg-clip-text text-transparent animate-gradient cursor-pointer">
-              Graphic Design
+            <span className="text-3xl sm:text-4xl"> and</span>{" "}
+            <span className="text-4xl sm:text-5xl bg-gradient-to-r from-aqua-lime via-aqua-hotpink to-aqua-cyan bg-clip-text text-transparent animate-gradient cursor-pointer">
+              UI/UX Design
             </span>{" "}
           </h1>
 
@@ -49,7 +76,7 @@ export default function HeroSection() {
           <Description />
 
           {/* CTA + socials */}
-          <div className="mt-8 flex items-center gap-4">
+          <div className="mt-2 flex items-center gap-4">
             <Link
               href="#contact"
               className="bg-secondary inline-flex items-center gap-2 rounded-md px-5 py-3 text-md font-medium text-white hover:bg-indigo-500 transition"
@@ -62,6 +89,8 @@ export default function HeroSection() {
               <Link
                 href="https://www.instagram.com/bambinaa_26/"
                 aria-label="bambinaa_26"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="hover:bg-gradient-to-br from-ig-orange via-ig-pink to-ig-purple w-12 h-12 rounded-full bg-white/10 flex items-center justify-center transition"
               >
                 <svg
@@ -79,7 +108,9 @@ export default function HeroSection() {
               <Link
                 href="https://facebook.com"
                 aria-label="Facebook"
-                className="hover:bg-fb-blue  w-12 h-12 rounded-full bg-white/10 flex items-center justify-center transition"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:bg-fb-blue w-12 h-12 rounded-full bg-white/10 flex items-center justify-center transition"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -95,7 +126,9 @@ export default function HeroSection() {
               <Link
                 href="https://linkedin.com"
                 aria-label="LinkedIn"
-                className="hover:bg-gradient-to-br from-linked-dark via-linked-blue to-linked-light w-12 h-12 rounded-full bg-white/10 flex items-center justify-center  transition"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:bg-gradient-to-br from-linked-dark via-linked-blue to-linked-light w-12 h-12 rounded-full bg-white/10 flex items-center justify-center transition"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -110,10 +143,9 @@ export default function HeroSection() {
           </div>
         </div>
       </div>
-
       {/* Right column: image + glow */}
       <div className="w-1/2 h-full flex flex-col justify-end items-center">
-        <div className="max-w-lg w-full h-auto relative flex items-center justify-center py-12">
+        <div className="max-w-lg w-full h-auto relative flex items-center justify-center py-6">
           {/* Glow / light effect behind the image */}
           <span
             aria-hidden
@@ -127,7 +159,7 @@ export default function HeroSection() {
             className="absolute z-0 w-80 h-80 rounded-full bg-gradient-to-r from-indigo-500 to-ig-pink opacity-50 filter blur-2xl translate-y-6 animate-gradient"
             style={{ mixBlendMode: "screen" }}
           />
-          <div className="relative z-10 max-w-sm w-full -top-10 -right-4 shadow-primary-glow">
+          <div className="relative z-10 max-w-sm w-full -top-2 -right-4 shadow-primary-glow">
             <Image
               src="/Png/HeroSec/Yusuf1.png"
               width={500}
