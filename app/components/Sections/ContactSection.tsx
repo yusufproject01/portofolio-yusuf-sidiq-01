@@ -6,8 +6,9 @@ export default function ContactSection() {
   return (
     <main
       id="contact"
-      className="w-full h-screen py-12 flex items-center justify-center relative"
+      className="w-full min-h-screen py-0 sm:py-12 flex items-center justify-center relative"
     >
+      {/* Background */}
       <Image
         src={"/assets/bg/bg-contact.jpg"}
         alt="bg"
@@ -15,13 +16,16 @@ export default function ContactSection() {
         height={500}
         className="object-cover w-full h-full absolute"
       />
+
+      {/* Container utama */}
       <section
-        className="max-w-5xl w-full h-full flex justify-center items-center 
-      rounded-tl-sm rounded-bl-sm shadow-sm overflow-hidden z-20"
+        className="max-w-5xl w-full flex flex-col md:flex-row justify-center items-center 
+        rounded-tl-sm rounded-bl-sm shadow-sm overflow-hidden z-20"
       >
+        {/* Gambar */}
         <div
-          className="w-2/3 h-full hover:brightness-75 transform duration-300 ease-in-out
-        hover:scale-105"
+          className="w-full md:w-2/3 h-64 sm:h-[33rem] hover:brightness-75 transform duration-300 ease-in-out
+          hover:scale-105 overflow-hidden"
         >
           <Image
             src={"/assets/bg/contact-cover.png"}
@@ -31,18 +35,20 @@ export default function ContactSection() {
             className="object-cover w-full h-full"
           />
         </div>
+
+        {/* Form */}
         <div
-          className="h-full py-6 px-8 bg-white flex flex-col items-center 
-        justify-center z-20 shadow-sm rounded-tr-sm rounded-br-sm text-sm"
+          className="w-full md:w-1/3 h-auto py-6 px-4 sm:px-8 bg-white flex flex-col items-center 
+          justify-center z-20 shadow-sm text-sm rounded-tr-sm rounded-br-sm mt-0 md:mt-0"
         >
-          <h1 className={`${poppins.className} text-2xl font-medium`}>
+          <h1 className={`${poppins.className} text-2xl font-medium mb-4`}>
             Contact Me!
           </h1>
-          <form className="mx-auto gap-y-2 flex flex-col mt-3">
-            {/* Input Option Mr/Mrs */}
+          <form className="mx-auto gap-y-2 flex flex-col w-full">
+            {/* Title */}
             <select
               name="title"
-              className="border border-gray-300 rounded-md px-4 py-2 w-72 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="border border-gray-300 rounded-md px-4 py-2 w-full focus:outline-none focus:ring-2 focus:ring-blue-500"
               defaultValue=""
             >
               <option value="" disabled>
@@ -54,31 +60,34 @@ export default function ContactSection() {
               <option value="Ms">Ms</option>
             </select>
 
-            {/* Input Full Name */}
+            {/* Full Name */}
             <input
               type="text"
               name="fullName"
               placeholder="Full Name"
-              className="border border-gray-300 rounded-md px-4 py-2 w-72 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="border border-gray-300 rounded-md px-4 py-2 w-full focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
-            {/* Input Email */}
+
+            {/* Email */}
             <input
               type="email"
               name="email"
               placeholder="Email"
-              className="border border-gray-300 rounded-md px-4 py-2 w-72 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="border border-gray-300 rounded-md px-4 py-2 w-full focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
-            {/* Input WhatsApp Number */}
+
+            {/* WhatsApp */}
             <input
               type="tel"
               name="whatsApp"
               placeholder="WhatsApp Number"
-              className="border border-gray-300 rounded-md px-4 py-2 w-72 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="border border-gray-300 rounded-md px-4 py-2 w-full focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
-            {/* Input Option Company or Personal */}
+
+            {/* Client Type */}
             <select
               name="clientType"
-              className="border border-gray-300 rounded-md px-4 py-2 w-72 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="border border-gray-300 rounded-md px-4 py-2 w-full focus:outline-none focus:ring-2 focus:ring-blue-500"
               defaultValue=""
             >
               <option value="" disabled>
@@ -88,18 +97,18 @@ export default function ContactSection() {
               <option value="personal">Personal</option>
             </select>
 
-            {/* Input Company Name */}
+            {/* Company Name */}
             <input
               type="text"
               name="company"
               placeholder="Company Name"
-              className="border border-gray-300 rounded-md px-4 py-2 w-72 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="border border-gray-300 rounded-md px-4 py-2 w-full focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
 
-            {/* Input Option Type Website */}
+            {/* Type of Project */}
             <select
               name="projectType"
-              className="border border-gray-300 rounded-md px-4 py-2 w-72 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="border border-gray-300 rounded-md px-4 py-2 w-full focus:outline-none focus:ring-2 focus:ring-blue-500"
               defaultValue=""
             >
               <option value="" disabled>
@@ -114,15 +123,17 @@ export default function ContactSection() {
               <option value="ecommerce">E-Commerce</option>
               <option value="booking">Booking Website</option>
             </select>
-            {/* Input Project Description */}
+
+            {/* Project Description */}
             <textarea
               name="projectDescription"
               placeholder="Project Description"
-              className="h-20 border border-gray-300 rounded-md px-4 py-2  w-72 
-              focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="h-20 border border-gray-300 rounded-md px-4 py-2 w-full focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
           </form>
-          <div className="w-full flex justify-center items-center pt-2">
+
+          {/* Button Kirim */}
+          <div className="w-full flex justify-center items-center pt-4">
             <Link
               href={"/"}
               className={`${inter.className} py-2 px-5 rounded-sm text-sm text-white font-medium bg-secondary hover:bg-ig-purple transform ease-in-out duration-300`}

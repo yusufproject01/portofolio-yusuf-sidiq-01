@@ -11,7 +11,7 @@ interface ProjectCardProps {
 export default function ProjectCard({ image, title, desc }: ProjectCardProps) {
   return (
     <div className="relative group bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 p-2">
-      <div className="w-full h-52 rounded-t-lg overflow-hidden">
+      <div className="w-full h-48 md:h-52 rounded-t-lg overflow-hidden">
         <Image
           src={image}
           alt={title}
@@ -23,7 +23,7 @@ export default function ProjectCard({ image, title, desc }: ProjectCardProps) {
 
       <div className="p-4">
         <h3
-          className={`${inter.className} text-lg font-semibold text-gray-800`}
+          className={`${inter.className} text-lg md:text-xl font-semibold text-gray-800`}
         >
           {title}
         </h3>
@@ -32,7 +32,7 @@ export default function ProjectCard({ image, title, desc }: ProjectCardProps) {
         </p>
       </div>
 
-      {/* Tombol panah di kanan bawah */}
+      {/* Tombol panah */}
       <Link
         href="/"
         className="absolute bottom-4 right-4 bg-blue-600 hover:bg-blue-700 text-white w-8 h-8 rounded-full flex items-center justify-center transition-transform duration-300 group-hover:scale-110"

@@ -1,5 +1,4 @@
 import React from "react";
-import Link from "next/link";
 
 interface MainLayoutProps {
   children?: React.ReactNode;
@@ -14,7 +13,7 @@ export default function MainLayout({
 }: Readonly<MainLayoutProps>) {
   return (
     <div
-      className={`min-h-auto flex flex-col bg-white text-gray-900 ${className}`}
+      className={`min-h-auto flex flex-col bg-white text-gray-900 overflow-x-hidden ${className}`}
     >
       {children}
     </div>

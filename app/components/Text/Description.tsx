@@ -13,13 +13,13 @@ const inter = Inter({
 export default function Description() {
   const [hoverIndex, setHoverIndex] = useState<number | null>(null);
   const text =
-    "I build web applications with a focus on user experience and performance. I combine best practices in frontend and backend development to create aesthetically pleasing yet functional interfaces. My expertise includes React/Next.js, responsive design, and performance optimization to ensure apps run fast across a wide range of devices.";
+    "Saya adalah Fullstack Web Developer yang siap membantu UMKM anda hadir secara online melalui website yang modern, responsif, dan dibangun dengan teknologi terkini seperti React.JS, Next.JS, dan Typescript.";
 
   const words = text.split(" ");
 
   return (
     <p
-      className={`${inter.className} mt-4 text-base sm:text-lg text-justify leading-relaxed`}
+      className={`${inter.className} mt-4 text-base sm:text-lg leading-relaxed`}
     >
       {words.map((word, index) => (
         <React.Fragment key={index}>

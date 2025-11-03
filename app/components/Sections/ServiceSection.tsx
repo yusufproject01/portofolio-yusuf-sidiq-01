@@ -1,6 +1,5 @@
 "use client";
 
-import Link from "next/link";
 import { inter, poppins, robotoCondensed } from "../FontGoogle";
 import { useState } from "react";
 import {
@@ -22,7 +21,7 @@ import {
   SiExpress,
 } from "react-icons/si";
 
-export default function Testimonial() {
+export default function ServicesSection() {
   type Category = "frontend" | "backend" | "uiux";
   const [active, setActive] = useState<Category>("frontend");
 
@@ -69,7 +68,10 @@ export default function Testimonial() {
   );
 
   return (
-    <main className="w-full flex flex-col justify-start items-center bg-tertiary py-12 px-6">
+    <main
+      id="services"
+      className="w-full flex flex-col justify-start items-center bg-tertiary py-12 px-6"
+    >
       {/* ===== TITLE ===== */}
       <div className="text-center mb-10">
         <h1
