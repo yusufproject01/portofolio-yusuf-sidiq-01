@@ -3,6 +3,16 @@ export {};
 declare module "*.glb";
 declare module "*.png";
 
+// Tambahkan ini di atas import lain
+declare global {
+  namespace JSX {
+    interface IntrinsicElements {
+      meshLineGeometry: any;
+      meshLineMaterial: any;
+    }
+  }
+}
+
 declare module "meshline" {
   export const MeshLineGeometry: any;
   export const MeshLineMaterial: any;

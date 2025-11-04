@@ -13,7 +13,7 @@ export default function ProjectSection() {
   return (
     <main
       id="projects"
-      className="w-full py-16 px-20 bg-gradient-to-br from-[#001F3F] to-[#002B5B] flex flex-col justify-start items-start"
+      className="w-full py-16 px-6 md:px-20 bg-gradient-to-br from-[#001F3F] to-[#002B5B] flex flex-col justify-start items-start"
     >
       {/* Title */}
       <h1
@@ -21,7 +21,9 @@ export default function ProjectSection() {
       >
         MY WORK
       </h1>
-      <h1 className={`${poppins.className} text-4xl font-bold text-white mt-2`}>
+      <h1
+        className={`${poppins.className} text-3xl md:text-4xl font-bold text-white mt-2`}
+      >
         RECENT PROJECT
       </h1>
       <p className="text-xs text-red-500">
@@ -38,6 +40,20 @@ export default function ProjectSection() {
           navigation
           pagination={{ clickable: true }}
           loop={true}
+          breakpoints={{
+            0: {
+              slidesPerView: 1, // 👈 Mobile
+            },
+            640: {
+              slidesPerView: 1.5, // 👈 Small tablet
+            },
+            768: {
+              slidesPerView: 2, // 👈 Tablet
+            },
+            1024: {
+              slidesPerView: 3, // 👈 Desktop (tetap seperti semula)
+            },
+          }}
           className="w-full"
         >
           {/* Slides */}
