@@ -1,5 +1,7 @@
 {
   "compilerOptions": {
+    "types": ["@types/react", "@types/node"],
+    "baseUrl": ".",
     "target": "ES2017",
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
