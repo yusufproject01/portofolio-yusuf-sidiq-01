@@ -1,14 +1,21 @@
 import Image from "next/image";
 import Link from "next/link";
 import { inter } from "../../FontGoogle";
+import { div } from "motion/react-client";
 
 interface ProjectCardProps {
   image: string;
   title: string;
   desc: string;
+  link?: string;
 }
 
-export default function ProjectCard({ image, title, desc }: ProjectCardProps) {
+export default function ProjectCard({
+  image,
+  title,
+  desc,
+  link,
+}: ProjectCardProps) {
   return (
     <div className="relative group bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 p-2">
       <div className="w-full h-48 md:h-52 rounded-t-lg overflow-hidden">
@@ -30,11 +37,17 @@ export default function ProjectCard({ image, title, desc }: ProjectCardProps) {
         <p className={`${inter.className} text-sm text-gray-500 mt-1`}>
           {desc}
         </p>
+        {link ? (
+          <p className="text-xs text-green-600">*Website has been deployed</p>
+        ) : (
+          <div className="py-2"></div>
+        )}
       </div>
 
       {/* Tombol panah */}
       <Link
-        href="/"
+        href={link || "/"}
+        target="_blank"
         className="absolute bottom-4 right-4 bg-blue-600 hover:bg-blue-700 text-white w-8 h-8 rounded-full flex items-center justify-center transition-transform duration-300 group-hover:scale-110"
       >
         ➜

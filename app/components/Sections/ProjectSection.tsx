@@ -59,9 +59,10 @@ export default function ProjectSection() {
           {/* Slides */}
           <SwiperSlide>
             <ProjectCard
-              image="/assets/particles/Ecommers.png"
-              title="E-Commerce Website"
-              desc="Online Store, Shopping Cart"
+              link="https://dapoer-ngebul.vercel.app/"
+              image="/assets/particles/Dapoer-Ngebul.png"
+              title="Dapoer Ngebul"
+              desc="Mini Ecommerce, Shopping Cart"
             />
           </SwiperSlide>
           <SwiperSlide>
