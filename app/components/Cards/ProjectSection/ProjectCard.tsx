@@ -38,7 +38,7 @@ export default function ProjectCard({
           {desc}
         </p>
         {link ? (
-          <p className="text-xs text-green-600">*Website has been deployed</p>
+          <p className="text-xs text-green-600">*Project has been completed!</p>
         ) : (
           <div className="py-2"></div>
         )}

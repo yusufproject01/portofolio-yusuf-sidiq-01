@@ -67,9 +67,10 @@ export default function ProjectSection() {
           </SwiperSlide>
           <SwiperSlide>
             <ProjectCard
-              image="/assets/particles/Companny.png"
-              title="Company Website"
-              desc="Profile and Company Website"
+              link="https://drive.google.com/drive/folders/1sbEZ_MzujtVfzcrmqci6WN4TzS4ibe7_?usp=sharing"
+              image="/assets/particles/Project-02.jpeg"
+              title="Better Together Boarding"
+              desc="Desain Graphic, UI/UX Website, Logo"
             />
           </SwiperSlide>
           <SwiperSlide>
