@@ -107,8 +107,8 @@ export default function ServicesSection() {
               {category === "frontend"
                 ? "Front-End"
                 : category === "backend"
-                ? "Back-End"
-                : "UI / UX"}
+                  ? "Back-End"
+                  : "UI / UX"}
             </button>
           ))}
         </section>
@@ -120,8 +120,8 @@ export default function ServicesSection() {
             {active === "frontend"
               ? "Front-End"
               : active === "backend"
-              ? "Back-End"
-              : "UI/UX"}
+                ? "Back-End"
+                : "UI/UX"}
           </h2>
           {renderSkills()}
         </section>

@@ -75,9 +75,10 @@ export default function ProjectSection() {
           </SwiperSlide>
           <SwiperSlide>
             <ProjectCard
-              image="/assets/particles/MiniEcommers.png"
-              title="Mini eCommerce Website"
-              desc="Online Store, Shopping Cart"
+              link="https://rental-mobil-cirebon.vercel.app/"
+              image="/assets/particles/Rahayu-Travel.png"
+              title="Rahayu Rental Mobil & Travel"
+              desc="Car Rental, Booking System"
             />
           </SwiperSlide>
           <SwiperSlide>
