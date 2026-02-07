@@ -83,9 +83,10 @@ export default function ProjectSection() {
           </SwiperSlide>
           <SwiperSlide>
             <ProjectCard
-              image="/assets/particles/Blog.png"
-              title="Blog Website"
-              desc="Personal Blog, Articles"
+              link="https://setia-kawan-motor-ciledug-io.vercel.app/"
+              image="/assets/particles/SetiaKawanMotor.png"
+              title="Setia Kawan Motor Ciledug"
+              desc="Company Profile, Dealer"
             />
           </SwiperSlide>
           <SwiperSlide>
