@@ -41,13 +41,13 @@ export default function FooterSection() {
             <FaLinkedinIn size={22} />
           </Link>
 
-          <Link
-            href="mailto:yourmail@example.com"
+          <a
+            href="mailto:sidiqyusuf042@gmail.com"
             aria-label="Gmail"
             className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-red-500 text-white flex items-center justify-center transition-transform duration-300 hover:scale-110"
           >
             <SiGmail size={22} />
-          </Link>
+          </a>
         </div>
 
         {/* Navigasi */}
