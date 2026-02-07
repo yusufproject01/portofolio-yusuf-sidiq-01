@@ -11,7 +11,7 @@ export default function FooterSection() {
         {/* Sosial Media */}
         <div className="flex justify-center md:justify-start items-center gap-4 w-full md:w-1/3">
           <Link
-            href="https://www.instagram.com/bambinaa_24/"
+            href="https://www.instagram.com/bambinaa_26/"
             aria-label="Instagram"
             target="_blank"
             rel="noopener noreferrer"
@@ -22,7 +22,7 @@ export default function FooterSection() {
           </Link>
 
           <Link
-            href="https://facebook.com"
+            href="https://www.facebook.com/profile.php?id=61586660549179"
             aria-label="Facebook"
             target="_blank"
             rel="noopener noreferrer"
